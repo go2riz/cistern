@@ -305,6 +305,7 @@ module Cistern::Attributes
       new_attributes = Cistern::Hash.stringify_keys(new_attributes)
 
       new_attributes.each do |key, value|
+        key = "cistern" if key == "service"
         symbol_key = key.to_sym
 
         # find nested paths
